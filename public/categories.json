@@ -1,0 +1,22 @@
+[
+    {
+        "name": "DeFi",
+        "color": "purple"
+    },
+    {
+        "name": "NFT",
+        "color": "pink"
+    },
+    {
+        "name": "GameFi",
+        "color": "green"
+    },
+    {
+        "name": "Infrastructure",
+        "color": "blue"
+    },
+    {
+        "name": "SocialFi",
+        "color": "red"
+    }
+]

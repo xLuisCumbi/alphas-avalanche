@@ -1,0 +1,53 @@
+[
+    {
+        "name": "Example DeFi Project",
+        "launch_date": "2024-03-15",
+        "category": "DeFi",
+        "description": "A revolutionary DeFi protocol on Avalanche.",
+        "website": "https://example.com",
+        "status": "live",
+        "logo": "https://example.com/logo.png",
+        "contract_address": "0x1234567890123456789012345678901234567890",
+        "socials": {
+            "twitter": "https://twitter.com/example",
+            "telegram": "https://t.me/example",
+            "discord": "https://discord.gg/example"
+        },
+        "dex": {
+            "dex_screener_url": "https://dexscreener.com/example",
+            "swap_url": "https://trader.joe/example"
+        }
+    },
+    {
+        "name": "Cool NFT Collection",
+        "launch_date": "2024-04-01",
+        "category": "NFT",
+        "description": "Unique digital collectibles on Avalanche.",
+        "website": "https://nft-example.com",
+        "status": "upcoming",
+        "socials": {
+            "twitter": "https://twitter.com/nft-example",
+            "discord": "https://discord.gg/nft-example"
+        },
+        "dex": {},
+        "logo": "https://nft-example.com/logo.png"
+    },
+    {
+        "name": "GameFi Adventure",
+        "launch_date": "2024-03-01",
+        "category": "GameFi",
+        "description": "Play-to-earn gaming platform with unique mechanics.",
+        "website": "https://gamefi-example.com",
+        "status": "live",
+        "socials": {
+            "twitter": "https://twitter.com/gamefi-example",
+            "telegram": "https://t.me/gamefi-example",
+            "discord": "https://discord.gg/gamefi-example"
+        },
+        "dex": {
+            "dex_screener_url": "https://dexscreener.com/gamefi-example",
+            "swap_url": "https://trader.joe/gamefi-example"
+        },
+        "logo": "https://gamefi-example.com/logo.png"
+    }
+]
