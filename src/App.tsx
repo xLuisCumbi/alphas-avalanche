@@ -7,7 +7,7 @@ import { ClipboardCopy } from 'lucide-react'
 import { FilterGroup } from './components/FilterGroup'
 
 function App() {
-  const { projects: allProjects, setProjects, filteredProjects } = useStore()
+  const { setProjects, filteredProjects } = useStore()
   const [copied, setCopied] = useState(false)
 
   const copyAddress = () => {
