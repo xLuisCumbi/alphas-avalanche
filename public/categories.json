@@ -18,5 +18,17 @@
     {
         "name": "SocialFi",
         "color": "red"
+    },
+    {
+        "name": "AI Agent",
+        "color": "yellow"
+    },
+    {
+        "name": "Governance",
+        "color": "orange"
+    },
+    {
+        "name": "Other",
+        "color": "gray"
     }
 ]

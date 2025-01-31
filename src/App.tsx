@@ -1,6 +1,5 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useStore } from './store/useStore'
-import { CategoryFilter } from './components/CategoryFilter'
 import { SearchBar } from './components/SearchBar'
 import { ProjectCard } from './components/ProjectCard'
 import './App.css'
@@ -9,51 +8,60 @@ import { FilterGroup } from './components/FilterGroup'
 
 function App() {
   const { projects: allProjects, setProjects, filteredProjects } = useStore()
+  const [copied, setCopied] = useState(false)
 
   const copyAddress = () => {
     navigator.clipboard.writeText('0x1f4604C7A7516d79dA580a82169a5084B34FBe19')
-    // You might want to add a toast notification here
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
   }
 
   useEffect(() => {
-    Promise.all([
-      fetch('/projects.json').then(res => res.json()),
-      fetch('/categories.json').then(res => res.json())
-    ]).then(([projectsData, categoriesData]) => {
-      setProjects(projectsData)
-      // You might want to store categories in your state as well
-    })
+    fetch('/projects.json')
+      .then(res => res.json())
+      .then(projectsData => {
+        console.log('Loaded projects:', projectsData);
+        setProjects(projectsData)
+      })
+      .catch(error => {
+        console.error('Error loading projects:', error);
+      })
   }, [setProjects])
 
   const projects = filteredProjects()
+  console.log('Filtered projects:', projects)
   const hasProjects = projects.length > 0
 
   return (
-    <div className="min-h-screen bg-ava-white dark:bg-ava-dark-gray p-6 flex flex-col">
-      <div className="container mx-auto flex-1 flex flex-col">
-        <div className="space-y-8 flex-1">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <img
-              src="https://downloads.intercomcdn.com/i/o/573443/e4005e2ec01a0d47fc2307c3/c9589557fe23620722e438e1ca53793f.png"
-              alt="Avalanche Logo"
-              className="h-12"
-            />
-            <div className="flex items-center gap-4">
-              <span className="text-ava-blue dark:text-ava-white text-sm">Support the project</span>
-              <button
-                onClick={copyAddress}
-                className="flex items-center gap-2 bg-ava-blue text-ava-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors text-sm"
-              >
-                <span>0x1f4604...FBe19</span>
-                <ClipboardCopy size={16} />
-              </button>
-            </div>
+    <div className="min-h-screen p-6 flex flex-col">
+      {/* Header Section */}
+      <header className="flex items-center justify-between p-4 bg-avax-blue dark:bg-[#161617] rounded-lg shadow-lg mb-6">
+        <h1 className="flex items-center gap-2 text-3xl font-bold text-[#FF394A] dark:text-[#FF394A]">
+          <img src="/assets/public/logo-red.svg" alt="AlphaHub Logo" className="w-8 h-8" />
+          AlphaHub Space
+        </h1>
+        <div className="flex items-center">
+          <span className="text-white mr-2">Support the project:</span>
+          <div className="relative flex flex-col items-center bg-red-500/50 text-white border border-red-800 rounded-lg">
+            <button
+              onClick={copyAddress}
+              className="flex items-center gap-2 bg-[#FF394A] text-white px-4 py-2 rounded-lg hover:bg-opacity-90 active:scale-95 active:bg-opacity-100 transition-all duration-150 text-sm relative"
+              title="Copy address"
+            >
+              <span>0x1f4604...FBe19</span>
+              <ClipboardCopy size={16} />
+            </button>
+            {copied && (
+              <span className="absolute -top-8 right-0 px-2 py-1 text-xs text-white bg-black rounded opacity-100 whitespace-nowrap">
+                Copied!
+              </span>
+            )}
           </div>
+        </div>
+      </header>
 
-          <h1 className="text-3xl font-bold text-ava-blue dark:text-ava-white">
-            Curated Avalanche Projects
-          </h1>
-
+      <div className="container mx-auto flex-1 flex flex-col relative z-10">
+        <div className="space-y-8 flex-1 mb-8">
           <div className="w-full">
             <SearchBar />
           </div>
@@ -65,7 +73,7 @@ function App() {
               </div>
             </aside>
 
-            <main className="flex-1 min-w-0">
+            <main className="flex-1 min-w-0 overflow-y-auto max-h-[80vh] p-4">
               {hasProjects ? (
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                   {projects.map((project) => (
@@ -87,30 +95,29 @@ function App() {
             </main>
           </div>
         </div>
-
-        <footer className="border-t border-ava-blue/10 dark:border-ava-white/10 pt-8 mt-12">
-          <div className="text-center text-ava-blue dark:text-ava-white text-sm">
-            Made with <span className="text-ava-red">❤️</span> by{' '}
-            <a
-              href="https://x.com/xLuisCumbi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ava-red hover:text-ava-blue dark:hover:text-ava-white transition-colors"
-            >
-              xLuisCumbi
-            </a>
-            {' & '}
-            <a
-              href="https://x.com/ultravioletadao"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-ava-red hover:text-ava-blue dark:hover:text-ava-white transition-colors"
-            >
-              UltravioletaDAO
-            </a>
-          </div>
-        </footer>
       </div>
+      <footer className="sticky bottom-0 left-0 right-0 border-t border-white/10 pt-6 pb-4 bg-[#161617] mt-auto">
+        <div className="text-center text-white text-sm">
+          Made with <span className="text-[#FF394A]">❤️</span> by{' '}
+          <a
+            href="https://x.com/xLuisCumbi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#FF394A] hover:text-white transition-colors"
+          >
+            xLuisCumbi
+          </a>
+          {' - Member of '}
+          <a
+            href="https://x.com/ultravioletadao"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#FF394A] hover:text-white transition-colors"
+          >
+            UltravioletaDAO
+          </a>
+        </div>
+      </footer>
     </div>
   )
 }

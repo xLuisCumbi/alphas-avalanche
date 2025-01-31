@@ -25,7 +25,10 @@ export const useStore = create<StoreState>((set, get) => ({
     selectedCategories: new Set(),
     selectedStatuses: new Set(),
 
-    setProjects: (projects) => set({ projects }),
+    setProjects: (projects) => {
+        console.log('Setting projects:', projects);
+        set({ projects });
+    },
     setSearchTerm: (term) => set({ searchTerm: term }),
 
     toggleCategory: (category) => set((state) => {
@@ -50,6 +53,8 @@ export const useStore = create<StoreState>((set, get) => ({
 
     filteredProjects: () => {
         const { projects, searchTerm, selectedCategories, selectedStatuses } = get();
+        console.log('Store state:', { projects, searchTerm, selectedCategories, selectedStatuses });
+
         let filtered = [...projects];
 
         if (selectedCategories.size > 0) {

@@ -1,53 +1,120 @@
 [
     {
-        "name": "Example DeFi Project",
+        "name": "Yellow Ket",
         "launch_date": "2024-03-15",
-        "category": "DeFi",
-        "description": "A revolutionary DeFi protocol on Avalanche.",
-        "website": "https://example.com",
+        "category": "AI Agent",
+        "description": "Yellow Ket - An AI Agent project on Avalanche blockchain.",
+        "website": "https://www.ketboard.xyz/",
         "status": "live",
-        "logo": "https://example.com/logo.png",
-        "contract_address": "0x1234567890123456789012345678901234567890",
+        "logo": "/assets/logos/ket.webp",
+        "contract_address": "0xFFFF003a6BAD9b743d658048742935fFFE2b6ED7",
         "socials": {
-            "twitter": "https://twitter.com/example",
-            "telegram": "https://t.me/example",
-            "discord": "https://discord.gg/example"
+            "twitter": "https://x.com/ketfromwyoming",
+            "telegram": "https://t.me/yellowketreal"
         },
         "dex": {
-            "dex_screener_url": "https://dexscreener.com/example",
-            "swap_url": "https://trader.joe/example"
+            "dex_screener_url": "https://dexscreener.com/avalanche/0x9962cf3ba621beb96d3fa2614d24161a717ada71",
+            "swap_url": "https://traderjoexyz.com/avalanche/trade"
         }
     },
     {
-        "name": "Cool NFT Collection",
-        "launch_date": "2024-04-01",
-        "category": "NFT",
-        "description": "Unique digital collectibles on Avalanche.",
-        "website": "https://nft-example.com",
-        "status": "upcoming",
-        "socials": {
-            "twitter": "https://twitter.com/nft-example",
-            "discord": "https://discord.gg/nft-example"
-        },
-        "dex": {},
-        "logo": "https://nft-example.com/logo.png"
-    },
-    {
-        "name": "GameFi Adventure",
-        "launch_date": "2024-03-01",
-        "category": "GameFi",
-        "description": "Play-to-earn gaming platform with unique mechanics.",
-        "website": "https://gamefi-example.com",
+        "name": "VELVET",
+        "launch_date": "2025-01-24",
+        "category": "AI Agent",
+        "description": "Blockchain with token implementation",
+        "website": "https://velvetai.xyz/",
         "status": "live",
+        "logo": "/assets/logos/velvetai.jpeg",
+        "contract_address": "0x70b05ef86e19f6bb70282b048b2e50d981256edd",
         "socials": {
-            "twitter": "https://twitter.com/gamefi-example",
-            "telegram": "https://t.me/gamefi-example",
-            "discord": "https://discord.gg/gamefi-example"
+            "twitter": "https://x.com/0xVelvetai"
         },
         "dex": {
-            "dex_screener_url": "https://dexscreener.com/gamefi-example",
-            "swap_url": "https://trader.joe/gamefi-example"
+            "dex_screener_url": "https://dexscreener.com/avalanche/0x70b05ef86e19f6bb70282b048b2e50d981256edd",
+            "swap_url": "https://traderjoexyz.com/avalanche/trade"
+        }
+    },
+    {
+        "name": "WINK",
+        "launch_date": "2025-01-25",
+        "category": "AI Agent",
+        "description": "Coming soon",
+        "website": "https://presale.wink-realm.com/?step=welcome",
+        "status": "presale",
+        "logo": "/assets/logos/wink.jpeg",
+        "socials": {
+            "twitter": "https://x.com/Wink_Realm"
+        }
+    },
+    {
+        "name": "TECH1000",
+        "launch_date": "2024-05-20",
+        "category": "SocialFi",
+        "description": "A version of 'Snowfort'",
+        "website": "https://tech1000.chain.site",
+        "status": "live",
+        "logo": "/assets/logos/tech1000.jpg",
+        "contract_address": "0xe1d895ff6721a77c16f4c53eeb43869da2dab02f",
+        "socials": {
+            "twitter": "https://x.com/TECHimproving"
         },
-        "logo": "https://gamefi-example.com/logo.png"
+        "dex": {
+            "dex_screener_url": "https://dexscreener.com/avalanche/0xe1d895ff6721a77c16f4c53eeb43869da2dab02f",
+            "swap_url": "https://traderjoexyz.com/avalanche/trade"
+        }
+    },
+    {
+        "name": "Scarlet Waifu Capital MGMT",
+        "launch_date": "",
+        "category": "Governance",
+        "description": "DAO platform",
+        "website": "https://scarletwaifu.xyz/",
+        "status": "upcoming",
+        "logo": "/assets/logos/waifu.jpg",
+        "socials": {
+            "twitter": "https://x.com/ScarletWaifuDAO",
+            "arena": "https://arena.social/ScarletWaifuDAO"
+        }
+    },
+    {
+        "name": "Gribz",
+        "launch_date": "",
+        "category": "AI Agent",
+        "description": "AI agent platform",
+        "website": "https://x.com/GribzAvax",
+        "status": "presale",
+        "logo": "/assets/logos/gribz.jpg",
+        "socials": {
+            "twitter": "https://x.com/GribzAvax"
+        }
+    },
+    {
+        "name": "AI9000",
+        "launch_date": "2025-01-13",
+        "category": "DeFi",
+        "description": "Launchpad platform",
+        "website": "https://x.com/ai9000_delaunch",
+        "status": "live",
+        "logo": "/assets/logos/ai9000.webp",
+        "contract_address": "0xb87e68df8539024b5b19c0d0517a44faa389fa4b",
+        "socials": {
+            "twitter": "https://x.com/ai9000_delaunch"
+        },
+        "dex": {
+            "dex_screener_url": "https://dexscreener.com/avalanche/0xb87e68df8539024b5b19c0d0517a44faa389fa4b",
+            "swap_url": "https://traderjoexyz.com/avalanche/trade"
+        }
+    },
+    {
+        "name": "AIGG Agent",
+        "launch_date": "",
+        "category": "AI Agent",
+        "description": "AI Agent trader",
+        "website": "https://x.com/aigg_agent",
+        "status": "upcoming",
+        "logo": "/assets/logos/aigg.jpg",
+        "socials": {
+            "twitter": "https://x.com/aigg_agent"
+        }
     }
 ]

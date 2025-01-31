@@ -5,14 +5,15 @@ export interface Project {
   description: string;
   website: string;
   logo: string;
-  status: 'live' | 'upcoming' | 'ended';
+  status: 'live' | 'upcoming' | 'ended' | 'presale';
   contract_address?: string;
   socials: {
     twitter?: string;
     telegram?: string;
     discord?: string;
+    arena?: string;
   };
-  dex: {
+  dex?: {
     dex_screener_url?: string;
     swap_url?: string;
   };
