@@ -5,6 +5,7 @@ import { ProjectCard } from './components/ProjectCard'
 import './App.css'
 import { ClipboardCopy, Search, Filter, X } from 'lucide-react'
 import { FilterGroup } from './components/FilterGroup'
+import { GoogleAnalytics } from './components/GoogleAnalytics'
 
 function App() {
   const { setProjects, filteredProjects } = useStore()
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <div className="min-h-screen p-6 flex flex-col">
+      <GoogleAnalytics />
       {/* Header Section - Added z-index and overflow */}
       <header className="flex flex-col md:flex-row md:items-center justify-between p-4 bg-avax-blue dark:bg-[#161617] rounded-lg shadow-lg mb-6 space-y-4 md:space-y-0 relative z-50 overflow-visible">
         <div className="flex items-center justify-between">
