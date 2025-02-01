@@ -106,9 +106,9 @@ function App() {
         </div>
       </div>
 
-      {/* Main Content - Adjusted z-index */}
-      <div className="container mx-auto flex-1 flex flex-col relative z-30">
-        <div className="space-y-8 flex-1 mb-20">
+      {/* Main Content - Updated z-index and overflow handling */}
+      <div className="container mx-auto flex-1 flex flex-col relative z-0">
+        <div className="space-y-8 flex-1 mb-24">
           {/* Desktop Search */}
           <div className="hidden md:block w-full">
             <SearchBar />
@@ -122,7 +122,7 @@ function App() {
               </div>
             </aside>
 
-            <main className="flex-1 min-w-0 overflow-y-auto max-h-[80vh] p-4">
+            <main className="flex-1 min-w-0 overflow-y-auto max-h-[calc(100vh-16rem)] p-4">
               {hasProjects ? (
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
                   {projects.map((project) => (
@@ -146,8 +146,8 @@ function App() {
         </div>
       </div>
 
-      {/* Footer - Adjusted z-index */}
-      <footer className="fixed bottom-0 left-0 right-0 border-t border-white/10 pt-6 pb-4 bg-[#161617] mt-auto z-20">
+      {/* Footer - Updated z-index and positioning */}
+      <footer className="fixed bottom-0 left-0 right-0 border-t border-white/10 pt-6 pb-4 bg-[#161617] mt-auto z-50">
         <div className="text-center text-white text-sm">
           Made with <span className="text-[#FF394A]">❤️</span> by{' '}
           <a

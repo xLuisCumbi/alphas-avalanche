@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# AlphaHub Space
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live site: [alphahub.space](https://www.alphahub.space/)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+AlphaHub Space is a curated directory of Avalanche ecosystem projects, tools, and resources. It serves as a central hub for discovering and exploring various projects built on the Avalanche network.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- 🔍 Real-time search functionality
+- 🏷️ Category-based filtering
+- 📱 Responsive design for mobile and desktop
+- 🌓 Dark/Light mode support
+- 🔄 Regular updates with new projects
 
-- Configure the top-level `parserOptions` property like this:
+## Project Categories
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- DeFi Protocols
+- NFT Projects
+- Gaming
+- Infrastructure
+- Tools & Analytics
+- And more...
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Contributing
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Want to add a project? Feel free to submit a PR or reach out to [@xLuisCumbi](https://x.com/xLuisCumbi) on X (Twitter).
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Support the Project
+
+If you find AlphaHub Space useful, you can support the development by sending contributions to:
+`0x1f4604C7A7516d79dA580a82169a5084B34FBe19`
+
+## About
+
+AlphaHub Space is developed and maintained by [xLuisCumbi](https://x.com/xLuisCumbi), a member of [UltravioletaDAO](https://x.com/ultravioletadao).
