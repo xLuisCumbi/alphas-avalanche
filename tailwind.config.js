@@ -15,7 +15,6 @@ export default {
                     light: '#FF394A99',
                     dark: '#E62E3E',
                 },
-                'ava-red': '#FF394A',
             },
             backdropBlur: {
                 xs: '2px',
